@@ -1,0 +1,22 @@
+body{
+    font-family: sans-serif;
+}
+
+.poster{
+    min-width: 100%;
+    min-height: 400px;
+    background-size: cover;
+    background-color: gray;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.download{
+    margin: 10px;
+    padding: 6px 8px;
+}
+.download > a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
