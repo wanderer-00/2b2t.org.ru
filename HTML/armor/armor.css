@@ -1,22 +1,41 @@
+:root{
+    --iten-note-border-color: #1E0147;
+    --iten-note-background-color: rgba(20,5,20,0.9);
+    --name-item-color: #54FEFE;
+    --text-2-color: #5454FE;
+    --text-3-color: #A7A7A7;
+    --text-4-color: #555555;
+}
+
 .cluster{
     display: flex;
 }
 
-.cluster > div:nth-child(1){
-    border: 2px solid red
-}
+.cluster > div:nth-child(1){}
 
-.cluster > div:nth-child(2){
-    border: 2px solid green;
-    width: 100%;
-}
+.cluster > div:nth-child(2){width: 100%}
 
 .cell, .cluster > div:nth-child(2) > div {
-    background-color: gray;
     width: 120px;
     height: 120px;
     margin: 10px;
     padding: 10px;
 }
 
+.cell{
+    background-color: gray;
+}
+
 .cluster > div:nth-child(2) > div {width: auto}
+
+
+
+.cell-note{
+    color: var(--text-3-color);
+    background-color: var(--iten-note-background-color);
+    border: 2px solid var(--iten-note-border-color);
+    border-radius: 4px;
+}
+.cell-note > .name-item{
+    color: var(--name-item-color);
+}
