@@ -1,0 +1,47 @@
+/***********************************/
+
+main{
+    display: grid;
+    margin: auto;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "a b"
+        "c d"
+/*
+        "-x+y +x+y"
+        "-x-y +x-y"
+*/
+}
+
+SVG {
+  transition: transform .3s;
+  transform-origin: center center;
+}
+main > div:nth-child(1) {
+  transform: rotate(180deg);
+}
+
+main > div{
+    width: 100%;
+    height: 100%;
+    border: 1px solid red
+}
+
+main > div:nth-child(1){
+    transform: rotate(180deg);
+    grid-area: a;
+}
+main > div:nth-child(2){
+    grid-area: b;
+}
+main > div:nth-child(3){
+    transform: rotate(90deg);
+    grid-area: c;
+}
+main > div:nth-child(4){
+    transform: rotate(0deg);
+    grid-area: d;
+}
+
+/***********************************/
