@@ -1,0 +1,28 @@
+/***********************************/
+.box{
+    padding: 0 8px;
+    border-bottom: 1px solid gray;
+}
+.box{
+    border-top: 1px solid gray;
+}
+
+.poster{
+    min-width: 100%;
+    min-height: 100px;
+    background-size: cover;
+    background-color: gray;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.download{
+    margin: 10px 0;
+    padding: 6px 8px;
+}
+.download > a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+/***********************************/
