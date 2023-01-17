@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        .table{
+/*            border: 1px solid red;*/
+        }
+        .row{
+            width: 100%;
+/*            border: 1px solid green;*/
+            display: flex;
+        }
+        .cell{
+            width: 150px;
+            aspect-ratio: 4/1;
+            background-color: lightgray;
+            margin: 4px auto;
+            
+            /* center center */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .icon{
+            aspect-ratio: 1/1;
+            
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <body>
+        <header></header>
+        <nav></nav>
+        <main>
+            
+            <div class="table">
+                
+                <div class="row">
+                    <div class="cell icon" style="background-image: url(IMG/1.webp);"></div>
+                </div>
+                
+                <div class="row">
+                    <div class="cell">прочность III</div>
+                </div>
+                
+                <div class="row">
+                    <div class="cell">везучий рыбак III</div>
+                </div>
+                
+                <div class="row">
+                    <div class="cell">приманка III</div>
+                </div>
+                
+                <div class="row">
+                    <div class="cell">починка</div>
+                </div>
+                
+                <div class="row">
+                    <div class="cell" style="color: red">проклятие утраты</div>
+                </div>
+                
+            </div>
+            
+        </main>
+        <footer></footer>
+    </body>
+</html>
