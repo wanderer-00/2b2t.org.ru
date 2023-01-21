@@ -4,6 +4,10 @@
         <title></title>
     </head>
     <style>
+        *{
+            box-sizing: border-box;
+            border: 1px solid green
+        }
         body{
             font-family: sans-serif;
         }
@@ -16,7 +20,7 @@
             display: flex;
         }
         .cell{
-            width: 150px;
+            width: 190px;
             aspect-ratio: 4/1;
             background-color: lightgray;
             margin: 4px auto;
@@ -33,6 +37,27 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+        .icon1{
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .icon1:before {
+            content: "";
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            z-index: -1;
+            background: linear-gradient(purple, white, purple, white, purple, white, purple, white, purple, white, purple);
+            background-position: 0 0;
+            animation: background 2s linear infinite normal;
+            -webkit-transform: rotate(30deg);
+            transform: rotate(-10deg);
+        }
+        @keyframes background {
+            100% {
+            background-position: 0 -190px;
+        }
     </style>
     <body>
         <header></header>
@@ -41,33 +66,177 @@
             
             <div class="table">
                 
-                <div class="row">
-                    <div class="cell icon" style="background-image: url(IMG/1.webp);"></div>
+                <div>
+                    <div class="row">
+                        <div class="cell icon" style="background-image: url(IMG/1.webp);"></div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="cell">прочность III</div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="cell">везучий рыбак III</div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="cell">приманка III</div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="cell">починка</div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="cell" style="color: red">проклятие утраты</div>
+                    </div>
                 </div>
-                
-                <div class="row">
-                    <div class="cell">прочность III</div>
+
+                <div>
+                    <div class="row">
+                        <div class="cell icon" style="background-image: url(https://webmg.ru/wp-content/uploads/2022/10/77e446ae25e6ced855c46a0b9500abe1.png);"></div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="cell">небесная кара V</div>
+                        <div class="cell">острота V</div>
+                        <div class="cell">бич членистоногих V</div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="cell">добыча III</div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="cell">прочность III</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">разящий клинок III</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">заговор огня II</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">отдача II</div>
+                    </div>
+                              
+                    <div class="row">
+                        <div class="cell">починка</div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="cell" style="color: red">проклятие утраты</div>
+                    </div>
                 </div>
-                
-                <div class="row">
-                    <div class="cell">везучий рыбак III</div>
+
+                <div>
+                    <div class="row">
+                        <div class="cell icon icon1"></div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="cell icon" style="background-image: url(IMG/source.gif); background-size: 300%"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">небесная кара V</div>
+                        <div class="cell">острота V</div>
+                        <div class="cell">бич членистоногих V</div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="cell">добыча III</div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="cell">прочность III</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">разящий клинок III</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">заговор огня II</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">отдача II</div>
+                    </div>
+                              
+                    <div class="row">
+                        <div class="cell">починка</div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="cell" style="color: red">проклятие утраты</div>
+                    </div>
                 </div>
-                
-                <div class="row">
-                    <div class="cell">приманка III</div>
-                </div>
-                
-                <div class="row">
-                    <div class="cell">починка</div>
-                </div>
-                
-                <div class="row">
-                    <div class="cell" style="color: red">проклятие утраты</div>
-                </div>
-                
             </div>
             
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 14" width="330px">
+                <style type="text/css">
+                    :root{
+                        --circuit: #1C1406;
+                        --page1: #9E9E9E;
+                        --page2: #878787;
+                        --page3: #434343;
+                        --main1: #4B3711;
+                        --main2: #3E2E0E;
+                        --main3: #291E09;
+                    }
+                    .circuit{fill: var(--circuit)}
+                </style>
+
+                <g class="circuit"></g>
+
+                <script>
+                        const circuit = [
+                            [ 8, 0, 1, 3],
+                            [11, 1, 1, 1],
+                            [12, 2, 1, 1],
+                            [13, 3, 1, 1],
+                            [14, 4, 1, 1],
+                            [15, 5, 1, 1],
+                            [15, 8, 1, 1],
+                            [14, 9, 1, 2],
+                            [12,10, 1, 2],
+                            [10,11, 1, 2],
+                            [ 8,12, 1, 2],
+                            [ 5,13, 1, 3],
+                            [ 4,12, 1, 1],
+                            [ 3,11, 1, 1],
+                            [ 2,10, 1, 1],
+                            [ 1, 9, 1, 1],
+                            [ 0, 5, 4, 1],
+                            [ 0, 4, 1, 2],
+                            [ 2, 3, 1, 2],
+                            [ 4, 2, 1, 2],
+                            [ 6, 1, 1, 2]
+                        ];
+
+                        var g = document.getElementsByClassName('circuit')[0]
+                        var svgns = "http://www.w3.org/2000/svg";
+
+                        for (i=0; i<21; i++){
+                            var rect = document.createElementNS(svgns, 'rect');
+                            rect.setAttribute('x', circuit[i][0]);
+                            rect.setAttribute('y', circuit[i][1]);
+                            rect.setAttribute('height', circuit[i][2]);
+                            rect.setAttribute('width', circuit[i][3]);
+                            g.appendChild(rect);
+                        }
+                </script>
+            </svg>
+            <img src="IMG/2.png" alt="">
         </main>
         <footer></footer>
     </body>
+    <script>
+        
+    </script>
+
 </html>
