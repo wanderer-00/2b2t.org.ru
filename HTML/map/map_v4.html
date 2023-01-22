@@ -56,7 +56,9 @@
 	        .normal{stroke: yellow}
 	        .bad{stroke: red}
             
-            g.hub > circle.red{fill:red}
+            g.hub > circle.R{fill:red}
+            g.hub > circle.G{fill:green}
+            g.hub > circle.Y{fill:yellow}
 
 	    </style>
 	    
@@ -199,11 +201,13 @@
 	    
 	    <!-- состояние -->
 	    <g  stroke-width="80">
+<!--
 	        <line class="good" x1="300" y1="0" x2="300" y2="300"/>
 	        <line class="good" x1="79" y1="300" x2="300" y2="300"/>
+-->
 	        
 	        <!-- главные магистрали -->
-	        <line class="normal" x1="1000" y1="1000" x2="1289" y2="1289"/><line class="good" x1="1289" y1="1289" x2="1500" y2="1500"/><line class="normal" x1="1500" y1="1500" x2="5000" y2="5000"/><line class="good" x1="5000" y1="5000" x2="5858" y2="5858"/><line class="normal" x1="5858" y1="5858" x2="5964" y2="5964"/><line class="bad" x1="5964" y1="5964" x2="6500" y2="6500"/><line class="good" x1="6500" y1="6500" x2="7053" y2="7053"/>
+<!--	        <line class="normal" x1="1000" y1="1000" x2="1289" y2="1289"/><line class="good" x1="1289" y1="1289" x2="1500" y2="1500"/><line class="normal" x1="1500" y1="1500" x2="5000" y2="5000"/><line class="good" x1="5000" y1="5000" x2="5858" y2="5858"/><line class="normal" x1="5858" y1="5858" x2="5964" y2="5964"/><line class="bad" x1="5964" y1="5964" x2="6500" y2="6500"/><line class="good" x1="6500" y1="6500" x2="7053" y2="7053"/>-->
 	<!--
 	        <line class="obsidian" x1="0" y1="0" x2="0" y2="-2400"/>
 	        <line class="obsidian" x1="0" y1="0" x2="2400" y2="0"/>
@@ -223,13 +227,13 @@
 	        
 	        
 	        
-	        <line class="good" x1="0" y1="-1500" x2="500" y2="-1500"/>
+<!--	        <line class="good" x1="0" y1="-1500" x2="500" y2="-1500"/>-->
 	        
 	        
 	        
 	        
 	        
-	        <line class="good" x1="0" y1="1000" x2="400" y2="1000"/><line class="bad" x1="400" y1="1000" x2="1000" y2="1000"/>
+<!--	        <line class="good" x1="0" y1="1000" x2="400" y2="1000"/><line class="bad" x1="400" y1="1000" x2="1000" y2="1000"/>-->
 	        
 	        
 	        
@@ -247,9 +251,28 @@
 	        <line class="good" x1="-1000" y1="-1000" x2="0" y2="-2000"/>
 	        
 	        <!-- HUB's -->
-	        <g class="hub">
-	            <circle class="red" cx="1000" cy="1000" r="100"/>
-	        </g>
+	        <g class="hub"></g>
+            <script type="text/javascript">
+                const hub = document.querySelector(".hub");
+
+                // координаты
+                const xy_hub = [
+                    [-200, 200,"G"],
+                    [-300, 300,"G"],
+                    [-400, 400,"G"],
+                    [-500, 500,"R"],
+                    [1000,1000,"R"],
+                ];
+
+                for(i=0; i<4; i++){
+                var circle = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+                    circle.setAttribute("cx",    xy_hub[i][0]);
+                    circle.setAttribute("cy",    xy_hub[i][1]);
+                    circle.setAttribute("class", xy_hub[i][2]);
+                    circle.setAttribute("r",     40);
+                    hub.appendChild(circle);
+                }
+            </script>
 	    </g>
 	    
 	    
