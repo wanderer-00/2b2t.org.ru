@@ -1,4 +1,4 @@
-[
+const array = [
     {
         "name": "#stop",
         "note": "остановить процесс"
