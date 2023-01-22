@@ -14,7 +14,7 @@
 	</div>
 
 	<svg xmlns="http://www.w3.org/2000/svg"
-	     viewBox="-1000 -1000 8000 8000">
+	     viewBox="-4000 -4000 8000 8000">
 
 	    <style>
 	        SVG{
@@ -65,7 +65,7 @@
 	    <script type="text/javascript">
 	    	const main = document.querySelector(".main");
 
-	    	// координаты главных магистралей
+	    	// координаты
 	    	const xy_main = [
 	    		[0,-7000],
 	    		[7000,0],
@@ -87,7 +87,7 @@
 	    <!-- диагональные магистрали -->
 	    <g class="sub-main"></g>
 	    <script type="text/javascript">
-	    	// координаты диагональных магистралей
+	    	// координаты
 	    	const xy_sub_main = [
 	    		[7000,-7000],
 	    		[7000,7000],
@@ -109,7 +109,7 @@
 	    <!-- главные кольцевые магистрали -->
 	    <g class="circle-highway"></g>
 	    <script type="text/javascript">
-	    	// координаты диагональных магистралей
+	    	// координаты
 	    	var circle_highway_radius = [
 	    		200, 300, 400, 500, 1000, 1500, 2000
 	    	];
@@ -126,7 +126,33 @@
 				main.appendChild(line);
 			}
 	    </script>
+        
+        <!-- диагональные кольцевые магистрали -->
+        <g class="sub-circle-highway">
+            <rect class="obsidian line" x="-1414.214" y="-1414.214" width="2828.428" height="2828.428" transform="rotate(45, 0, 0)"/>
+        </g>
+        <script type="text/javascript">
+	    	// координаты
+	    	var circle_highway_radius = [
+	    		2000
+	    	];
 
+	    	console.log(circle_highway_radius.length);
+
+	    	for(i=0; i<7; i++){
+			var line = document.createElementNS("http://www.w3.org/2000/svg", 'rect');
+				line.setAttribute("x", circle_highway_radius[i]*-1);
+				line.setAttribute("y", circle_highway_radius[i]*-1);
+				line.setAttribute("width", circle_highway_radius[i]*2);
+				line.setAttribute("height", circle_highway_radius[i]*2);
+				line.setAttribute("class", "obsidian line");
+				main.appendChild(line);
+			}
+        </script>
+        
+        
+        
+        
 	    <!-- spaun place -->
 	    <rect class="obsidian" x="-100" y="-100" width="200" height="200" fill="#3C3056"/>	    
 	    
@@ -148,7 +174,7 @@
 	    
 	    <!-- диагональные кольцевые магистрали -->
 	    <g>
-	        <rect class="obsidian line" x="-1414.214" y="-1414.214" width="2828.428" height="2828.428" transform="rotate(45, 0, 0)"/>
+	        
 	    </g>
 	    
 	    <!-- обычный тоннель -->
