@@ -1,3 +1,9 @@
+:root{
+    --text-color: #FFF;
+    --name-color: #1ABC9C;
+    --body-b-color: #343434;
+}
+
 .noMark{
     -moz-user-select: none;
     -khtml-user-select: none;
@@ -8,11 +14,22 @@ body{
     color: #FFF;
     padding: 0 10px;
     font-family: cursive;
-    background-color: #343434;
+    background-color: var(--body-b-color);
 }
-h2{
-    color:#1ABC9C
+.name,
+select{
+    color: var(--name-color);
+    font-size: 22px;
 }
+
+select{
+    color: var(--name-color);
+    background-color: var(--body-b-color);
+}
+option{
+    background-color: var(--body-b-color);
+}
+
 .wrapper{
     margin: auto;
     max-width: 900px;
