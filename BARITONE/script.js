@@ -2,9 +2,15 @@
 const cluster = document.getElementById('cluster');
 
 for(i=0; i<array.length; i++){
-    cluster.innerHTML += `
-        <div class="box">
-            <h2 id='F'>${array[i].name}</h2>
-            <p class='note noMark'>${array[i].note}</p>
-        </div>`;
+    let box = document.createElement('div');
+    box.className = "box";
+    cluster.append(box);
+    
+    let name = document.createElement('h2');
+    name.innerHTML = array[i].name;
+    box.append(name)
+    
+    let note = document.createElement('p');
+    note.innerHTML = array[i].note;
+    box.append(note)
 }

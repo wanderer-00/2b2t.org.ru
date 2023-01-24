@@ -1,82 +1,131 @@
 const array = [
     {
-        "name": "#stop",
+        "name": "goal",
+        "note": "устанавливает цель",
+        "arg":[
+            "x y z",
+            "x z",
+            " ",
+            "clear"
+        ]
+    },
+    {
+        "name": "path",
+        "note": "проложить путь к цели"
+    },
+    {
+        "name": "invert",
+        "note": "проложить путь от цели"
+    },
+    {
+        "name": "goto",
+        "note": "прийти на координаты",
+        "arg":[
+            "x y z",
+            "x z"
+        ]
+    },
+    {
+        "name": "goto -123 90 75",
+        "note": "прийти на координаты x=-123 y=90 z=75 | ~ текущая координата"
+    },
+    {
+        "name": "follow",
+        "note": "следовать за игроком",
+        "arg":[
+            "player ник",
+            "entity название_существа"
+        ]
+    },
+    {
+        "name": "sel",
+        "note":[
+            ""
+        ],
+        "arg":[
+            "1",
+            "2",
+            "clear",
+            "cleararea",
+            "fill ИМЯБЛОКА",
+            "set ИМЯБЛОКА",
+            "replace ИМЯБЛОКА1 ИМЯБЛОКА2",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "name": "blockreachdistance 4",
+        "note": "дистанция вскапывания (4 - стабильное значение)"
+    },
+    {
+        "name": "stop",
         "note": "остановить процесс"
     },
-
     {
-        "name": "#pause",
+        "name": "cancel",
+        "note": "остановить процесс"
+    },
+    {
+        "name": "pause",
         "note": "приостоновить процесс (если кончились ресурсы)"
     },
 
     {
-        "name": "#resume",
+        "name": "resume",
         "note": "продолжить процесс"
     },
 
     {
-        "name": "#click",
+        "name": "click",
         "note": "выделение области (прописываешь команду, зажимаешь ЛКМ на угловом блоке и тянешь до другого, отпускаешь, ESC для разблокировки чата для следующей команды)"
     },
 
     {
-        "name": "#sel clear",
+        "name": "sel clear",
         "note": "удалить выделение области"
     },
 
     {
-        "name": "#allowInventory",
+        "name": "allowInventory",
         "note": "(true или false) Разрешить использовать предметы из инвентаря."
     },
 
 
     {
-        "name": "#buildinlayers",
+        "name": "buildinlayers",
         "note": "(true или false) постройка, очистка по слоям, а не алгоритму ближнего блока."
     },
 
     {
-        "name": "#sel set ИМЯБЛОКА",
+        "name": "sel set ИМЯБЛОКА",
         "note": "заложить выделенную область указанным блоком"
     },
 
     {
-        "name": "#build имясхемы.schematic",
+        "name": "build имясхемы.schematic",
         "note": "построить схему"
     },
-
     {
-        "name": "#goto x y z",
-        "note": "прийти на координаты"
-    },
-
-    {
-        "name": "#goto -123 90 75",
-        "note": "прийти на координаты x=-123 y=90 z=75 | ~ текущая координата"
-    },
-
-    {
-        "name": "#follow player ник",
-        "note": "следовать за игроком"
-    },
-
-    {
-        "name": "#tunnel ширина высота длина",
+        "name": "tunnel ширина высота длина",
         "note": "тунел по заданным параметрам"
     },
 
     {
-        "name": "#tunnel 2 3 100",
+        "name": "tunnel 2 3 100",
         "note": "тунель для лошадей"
     },
 
     {
-        "name": "#mine lapis_ore redstone_ore diamond_ore quartz_ore",
+        "name": "mine lapis_ore redstone_ore diamond_ore quartz_ore",
         "note": "для починки инструмена"
     },
 
     {
-        "name": "#sel expand o направление кол-во",
+        "name": "sel expand o направление кол-во",
         "note": "расширить выделение в сторону на несколько блоков"
     },
 
