@@ -2,63 +2,8 @@
 <html>
     <head>
         <title></title>
+        <link rel="stylesheet" href="1.css">
     </head>
-    <style>
-        *{
-            box-sizing: border-box;
-            border: 1px solid green
-        }
-        body{
-            font-family: sans-serif;
-        }
-        .table{
-/*            border: 1px solid red;*/
-        }
-        .row{
-            width: 100%;
-/*            border: 1px solid green;*/
-            display: flex;
-        }
-        .cell{
-            width: 190px;
-            aspect-ratio: 4/1;
-            background-color: lightgray;
-            margin: 4px auto;
-            
-            /* center center */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .icon{
-            aspect-ratio: 1/1;
-            
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .icon1{
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
-        }
-        .icon1:before {
-            content: "";
-            position: absolute;
-            width: 150%;
-            height: 150%;
-            z-index: -1;
-            background: linear-gradient(purple, white, purple, white, purple, white, purple, white, purple, white, purple);
-            background-position: 0 0;
-            animation: background 2s linear infinite normal;
-            -webkit-transform: rotate(30deg);
-            transform: rotate(-10deg);
-        }
-        @keyframes background {
-            100% {
-            background-position: 0 -190px;
-        }
-    </style>
     <body>
         <header></header>
         <nav></nav>
@@ -70,32 +15,29 @@
                     <div class="row">
                         <div class="cell icon" style="background-image: url(IMG/1.webp);"></div>
                     </div>
-                    
-                    <div class="row">
-                        <div class="cell">прочность III</div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="cell">везучий рыбак III</div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="cell">приманка III</div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="cell">починка</div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="cell" style="color: red">проклятие утраты</div>
-                    </div>
                 </div>
                 
                 <script>
                     const table = document.getElementsByClassName("table")[0];
                     
-                    var box = document.createElement("")
+                    const spells = [
+                        "прочность III",
+                        "везучий рыбак III",
+                        "приманка III",
+                        "починка",
+                        "проклятие утраты",
+                    ];
+                    
+                    var box = document.createElement("div");
+                    for(i=0; i<5; i++){
+                        let row = document.createElement("div");
+                        row.className = "row";
+                        let cell = document.createElement("cell");
+                        cell.className = "cell";
+                        cell.innerHTML = spells[i]
+                        row.append(cell);
+                        box.append(row);  
+                    }
                 </script>
 
                 <div>
@@ -241,8 +183,6 @@
         </main>
         <footer></footer>
     </body>
-    <script>
-        
-    </script>
+    <script src="data.js"></script>
 
 </html>
