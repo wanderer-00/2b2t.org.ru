@@ -70,7 +70,7 @@ const array = [
     },
     {
         "name": "mine",
-        "note": "для починки инструмена",
+        "note": "Добыча указанного блока. Можно использовать, для починки предметов опытом",
         "arg":[
             "ИМЯБЛОКА",
             // "lapis_ore redstone_ore diamond_ore quartz_ore"
